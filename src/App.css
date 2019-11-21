@@ -15,3 +15,12 @@ a {
   color: #809c8e;
   text-decoration: none;
 }
+
+h1, 
+h2,
+h3,
+h4, 
+p {
+  padding: 5px;
+  margin: 5px;
+}
