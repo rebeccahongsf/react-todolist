@@ -4,9 +4,9 @@ import PropTypes from 'prop-types';
 export class TodoItem extends Component {
   getStyle = () => {
     return {
-      backgroundColor: '#809c8e',
+      backgroundColor: '#eee',
       padding: '10px',
-      borderBottom: '1px #ccc dotted',
+      borderBottom: '1px #333 dotted',
       textDecoration: this.props.todo.completed ? 'line-through' : 'none'
     }
   }
@@ -15,12 +15,11 @@ export class TodoItem extends Component {
     const { id, title } = this.props.todo;
     return (
       <div style={this.getStyle()}>
-        <p>
-          <input type="checkbox" onChange={this.props.markComplete.bind(title, id)} />
+        <span onClick={this.props.markComplete.bind(title, id)}>
           {' '} 
           { title }
-          <button onClick={this.props.delTodo.bind(this, id)} style={btnStyle}><i class="fas fa-trash"></i></button>
-        </p>
+        </span>
+        <button onClick={this.props.delTodo.bind(this, id)} style={btnStyle}>DEL</button>
       </div>
     )
   }
@@ -28,18 +27,21 @@ export class TodoItem extends Component {
 
 // PropTypes
 TodoItem.propTypes = {
-  todo: PropTypes.object.isRequired
+  todos: PropTypes.array.isRequired,
+  markComplete: PropTypes.func.isRequired,
+  delTodo: PropTypes.func.isRequired
 }
 
 const btnStyle = {
-  background: '#ff5c5c',
+  background: '#bf4348',
   color: '#fff',
   border: 'none',
   padding: '6px',
-  borderRadius: '50%',
+  borderRadius: '5px',
   cursor: 'pointer',
   float: 'right',
-  fontSize: '0.5em'
+  fontSize: '0.5em',
+  textDecoration: 'none'
 }
 
 export default TodoItem;
