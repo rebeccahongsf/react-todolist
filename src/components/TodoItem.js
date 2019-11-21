@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
+import '../App.css';
+
 export class TodoItem extends Component {
   getStyle = () => {
     return {
@@ -36,7 +38,7 @@ const btnStyle = {
   background: '#bf4348',
   color: '#fff',
   border: 'none',
-  padding: '6px',
+  padding: '7px 20px',
   borderRadius: '5px',
   cursor: 'pointer',
   float: 'right',
