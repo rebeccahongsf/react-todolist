@@ -1,12 +1,31 @@
 import React, { Component } from 'react';
 import TodoItem from './TodoItem';
 import PropTypes from 'prop-types';
+import Dragula from 'react-dragula';
 
 class Todos extends Component {  
+  dragulaDecorator = (componentBackingInstance) => {
+    if (componentBackingInstance) {
+      let options = { };
+      Dragula([componentBackingInstance], options);
+    }
+  };
+  
   render() {
-    return this.props.todos.map((todo) => (
-      <TodoItem key={todo.id} todo={todo} markComplete={this.props.markComplete} delTodo={this.props.delTodo} />
-    ));
+    return (
+      <div
+        className='container' 
+        ref={this.dragulaDecorator}
+      >
+        {this.props.todos.map((todo) => (
+        
+          <TodoItem
+            key={todo.id} todo={todo} 
+            markComplete={this.props.markComplete} 
+            delTodo={this.props.delTodo} />
+          ))};
+      </div>
+    )
   }
 }
 

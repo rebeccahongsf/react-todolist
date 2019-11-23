@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import { ReactComponent as Hamburger } from "../hamburger.svg";
 
 import '../App.css';
 
 export class TodoItem extends Component {
   getStyle = () => {
     return {
-      backgroundColor: '#eee',
+      backgroundColor: '#ccc',
       padding: '10px',
       borderBottom: '1px #333 dotted',
       textDecoration: this.props.todo.completed ? 'line-through' : 'none'
@@ -17,6 +18,7 @@ export class TodoItem extends Component {
     const { id, title } = this.props.todo;
     return (
       <div style={this.getStyle()}>
+        <Hamburger />
         <span onClick={this.props.markComplete.bind(title, id)}>
           {' '} 
           { title }
