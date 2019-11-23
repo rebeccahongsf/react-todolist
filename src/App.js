@@ -15,37 +15,37 @@ class App extends Component {
       {
         id: uuid.v4(),
         title: 'Exchange money at Gringotts.',
-        completed: 'false'
+        completed: false
       },
       {
         id: uuid.v4(),
         title: 'Meet Hagrid at the Three Broomsticks.',
-        completed: 'false'
+        completed: false
       },
       {
         id: uuid.v4(),
         title: 'Buy a wand.',
-        completed: 'false'
+        completed: false
       },
       {
         id: uuid.v4(),
         title: 'Eat at the Leaky Cauldron.',
-        completed: 'false'
+        completed: false
       },
       {
         id: uuid.v4(),
         title: 'Drink butterbeer.',
-        completed: 'false'
+        completed: false
       },
       {
         id: uuid.v4(),
         title: 'Buy candy at Honeydukes for Ron.',
-        completed: 'false'
+        completed: false
       },
       {
         id: uuid.v4(),
         title: 'Get ice cream at Florean Fortescue.',
-        completed: 'false'
+        completed: false
       }
     ]
   }
