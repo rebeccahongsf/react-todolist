@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { ReactComponent as Hamburger } from "../hamburger.svg";
+import { ReactComponent as Arrows } from "../assets/arrows.svg";
+import { ReactComponent as X } from "../assets/x.svg";
 
 import '../App.css';
 
@@ -19,12 +20,14 @@ export class TodoItem extends Component {
     const { id, title } = this.props.todo;
     return (
       <div style={this.getStyle()}>
-        <Hamburger />
+        <Arrows />
         <span onClick={this.props.markComplete.bind(title, id)}>
           {' '} 
           { title }
         </span>
-        <button onClick={this.props.delTodo.bind(this, id)} style={btnStyle}>DEL</button>
+        <span onClick={this.props.delTodo.bind(this, id)} style={btnStyle}>
+          <X />
+        </span>
       </div>
     )
   }
@@ -32,22 +35,17 @@ export class TodoItem extends Component {
 
 // PropTypes
 TodoItem.propTypes = {
-  todos: PropTypes.array.isRequired,
+  todo: PropTypes.object.isRequired,
   markComplete: PropTypes.func.isRequired,
   delTodo: PropTypes.func.isRequired
 }
 
 const btnStyle = {
-  background: '#bf4348',
-  color: '#fff',
-  border: 'none',
-  padding: '7px 20px',
-  margin: '0px 10px',
-  borderRadius: '5px',
   cursor: 'pointer',
+  float: 'right',
   position: 'absolute',
   right: '0',
-  fontSize: '0.5em',
+  margin: '0 10px',
   textDecoration: 'none'
 }
 
