@@ -12,6 +12,10 @@ body {
   overflow: hidden;
 }
 
+input { 
+  -webkit-appearance: none; 
+}
+
 a {
   color: #809c8e;
   text-decoration: none;
