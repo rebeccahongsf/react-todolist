@@ -7,6 +7,7 @@ import '../App.css';
 export class TodoItem extends Component {
   getStyle = () => {
     return {
+      position: 'relative',
       backgroundColor: '#ccc',
       padding: '10px',
       borderBottom: '1px #333 dotted',
@@ -41,9 +42,11 @@ const btnStyle = {
   color: '#fff',
   border: 'none',
   padding: '7px 20px',
+  margin: '0px 10px',
   borderRadius: '5px',
   cursor: 'pointer',
-  float: 'right',
+  position: 'absolute',
+  right: '0',
   fontSize: '0.5em',
   textDecoration: 'none'
 }
