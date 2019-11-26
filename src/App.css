@@ -92,7 +92,7 @@ svg {
 }
 
 #drag-elements > div:active {
-  cursor: move; /* fallback if grab cursor is unsupported */
+  cursor: move;
   cursor: grab;
   cursor: -moz-grab;
   cursor: -webkit-grab;
@@ -101,9 +101,6 @@ svg {
 }
 
 #drag-elements > div:hover {
-  cursor: grabbing;
-  cursor: -moz-grabbing;
-  cursor: -webkit-grabbing;
   border: 2px solid gray;
   background-color: #e5e5e5;
 }
