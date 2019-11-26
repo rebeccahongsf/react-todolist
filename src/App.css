@@ -59,6 +59,10 @@ p {
   color: #f5495f;
 }
 
+.gripStyle {
+  padding-right: 0.5rem;
+}
+
 svg {
   height: 1rem;
   color: #fff;
@@ -88,13 +92,18 @@ svg {
 }
 
 #drag-elements > div:active {
-  -webkit-animation: wiggle 0.3s 0s infinite ease-in;
-  animation: wiggle 0.3s 0s infinite ease-in;
+  cursor: move; /* fallback if grab cursor is unsupported */
+  cursor: grab;
+  cursor: -moz-grab;
+  cursor: -webkit-grab;
   opacity: .6;
   border: 2px solid #000;
 }
 
 #drag-elements > div:hover {
+  cursor: grabbing;
+  cursor: -moz-grabbing;
+  cursor: -webkit-grabbing;
   border: 2px solid gray;
   background-color: #e5e5e5;
 }
@@ -138,6 +147,7 @@ svg {
 .gu-hide {
   display: none !important;
 }
+
 .gu-unselectable {
   -webkit-user-select: none !important;
   -moz-user-select: none !important;
@@ -147,12 +157,15 @@ svg {
 
 .gu-transit {
   opacity: 0.5;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
-  filter: alpha(opacity=50);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+  filter: alpha(opacity=80);
 }
 
 .gu-mirror {
-  opacity: 0.5;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
-  filter: alpha(opacity=50);
+  opacity: 0.8;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+  filter: alpha(opacity=80);
+  border-left-style: solid;
+  border-left-width: 0.5rem;
+  border-left-color: #809c8e;
 }

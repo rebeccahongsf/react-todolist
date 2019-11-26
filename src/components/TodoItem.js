@@ -20,7 +20,7 @@ export class TodoItem extends Component {
     const { id, title } = this.props.todo;
     return (
       <div style={this.getStyle()}>
-        <Grip />
+        <Grip className='gripStyle '/>
         <span onClick={this.props.markComplete.bind(title, id)}>
           {' '} 
           { title }
