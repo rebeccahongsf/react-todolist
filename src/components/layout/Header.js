@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 function Header() {
   return (
     <header style={headerStyle}>
+      <meta name="viewport" content="width=device-width, user-scalable=no">
       <h1>Todo List</h1>
       <Link style={linkStyle} to="/react-todolist/">Home</Link> | <Link style={linkStyle} to="/react-todolist/about">About</Link>
     </header>
