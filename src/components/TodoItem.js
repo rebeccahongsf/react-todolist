@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { ReactComponent as Arrows } from "../assets/arrows.svg";
+import { ReactComponent as Grip } from "../assets/grip.svg";
 import { ReactComponent as X } from "../assets/x.svg";
 
 import '../App.css';
@@ -20,12 +20,12 @@ export class TodoItem extends Component {
     const { id, title } = this.props.todo;
     return (
       <div style={this.getStyle()}>
-        <Arrows />
+        <Grip />
         <span onClick={this.props.markComplete.bind(title, id)}>
           {' '} 
           { title }
         </span>
-        <span onClick={this.props.delTodo.bind(this, id)} style={btnStyle}>
+        <span onClick={this.props.delTodo.bind(this, id)} className='delStyle'>
           <X />
         </span>
       </div>
@@ -40,13 +40,13 @@ TodoItem.propTypes = {
   delTodo: PropTypes.func.isRequired
 }
 
-const btnStyle = {
-  cursor: 'pointer',
-  float: 'right',
-  position: 'absolute',
-  right: '0',
-  margin: '0 10px',
-  textDecoration: 'none'
-}
+// const btnStyle = {
+//   cursor: 'pointer',
+//   float: 'right',
+//   position: 'absolute',
+//   right: '0',
+//   margin: '0 10px',
+//   textDecoration: 'none'
+// }
 
 export default TodoItem;

@@ -45,6 +45,20 @@ p {
   background: #666;
 }
 
+.delStyle {
+  cursor: pointer;
+  float: right;
+  position: absolute;
+  right: 0;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+.delStyle svg:hover,
+.delStyle svg:focus {
+  color: #f5495f;
+}
+
 svg {
   height: 1rem;
   color: #fff;
