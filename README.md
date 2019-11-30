@@ -3,6 +3,8 @@
 ## Description
 This is a simple Todo List project to apply my understanding of React.
 
+[Demo](https://rebeccahong.me/react-todolist/)
+
 ## Contributing
 Not currently open to contributions
 
