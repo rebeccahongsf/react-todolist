@@ -4,7 +4,7 @@ This is a simple Todo List project to apply my understanding of React.
 [Demo](https://rebeccahong.me/react-todolist/)
 
 ## Configuration and Installation
-
+Local Setup
 ```
 git clone https://github.com/rebeccahongsf/react-todolist.git
 cd react-todolist.git
